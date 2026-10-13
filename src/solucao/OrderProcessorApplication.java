@@ -10,16 +10,18 @@ public class OrderProcessorApplication {
 
     public static void main(String[] args) {
 
-        try (Scanner input = new Scanner(System.in)) {
+        try ( Scanner input = new Scanner(System.in)){
+
 
             System.out.println("Insira o valor do pedido: ");
             pedido.setValorTotalPedido(input.nextBigDecimal());
 
             System.out.println("Insira o peso total do pedido: ");
             pedido.setPesoKilo(input.nextDouble());
+            input.nextLine();
 
-            EscolhaTipoClienteScreen.escolhaTipoCliente(pedido);
-            EscolhaFreteScreen.escolherFrete(pedido);
+            EscolhaTipoClienteScreen.escolhaTipoCliente(pedido, input);
+            EscolhaFreteScreen.escolherFrete(pedido, input);
 
             System.out.println("Valor Final do Pedido: " +  pedido.getValorFinalPedido());
 
