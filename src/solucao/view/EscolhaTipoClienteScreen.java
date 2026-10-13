@@ -11,10 +11,8 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class EscolhaTipoClienteScreen {
-    public static  void escolhaTipoCliente(Pedido pedido) {
+    public static  void escolhaTipoCliente(Pedido pedido, Scanner input) {
         try {
-            Scanner input = new Scanner(System.in);
-
             System.out.println("Insira o tipo de cliente (VIP/REGULAR): ");
             ClientType tipoCliente = ClientType
                     .valueOf(
