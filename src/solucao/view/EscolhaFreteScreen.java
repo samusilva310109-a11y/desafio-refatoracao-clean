@@ -7,8 +7,8 @@ import solucao.strategies.fretestrategies.FreteStrategy;
 import java.util.Scanner;
 
 public class EscolhaFreteScreen {
-    public static void escolherFrete(Pedido pedido) {
-        try (Scanner input = new Scanner(System.in)) {
+    public static void escolherFrete(Pedido pedido, Scanner input) {
+        try {
             System.out.print(
                     """
                        Escolha o frete:
